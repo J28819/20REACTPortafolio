@@ -1,10 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react'
+import Nav from './components/Nav';
+import NavBar from './components/BSNvar';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function App() {
   return (
+    
     <div className="App">
+     
+      <NavBar />
+      <Nav />
+
+
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
