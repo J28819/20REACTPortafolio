@@ -19,17 +19,21 @@ function BasicExample() {
       {/* Stack the columns on mobile by making one full-width and the other half-width */}
       <Row >
         <Col   xs={12} md={8}>
+
+        <Form.Group className="mb-3 " controlId="formBasicName">
+        <Form.Label className="form" >Name</Form.Label>
+        <Form.Control type="text" placeholder="Enter Name" />
+        </Form.Group>
+          
         <Form.Group className="mb-3 " controlId="formBasicEmail">
         <Form.Label className="form" >Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
+       
         <Form.Text >
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label className="form">Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
+    
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>

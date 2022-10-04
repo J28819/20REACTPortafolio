@@ -21,6 +21,9 @@ import ImgOverlayExample from './components/imgoverley';
 function App() {
 let Component
 switch (window.location.pathname) {
+  case "/home":
+    Component = <AboutMe />
+    break
   case "/":
     Component = <AboutMe />
     break
