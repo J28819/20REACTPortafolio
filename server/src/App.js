@@ -8,7 +8,9 @@ import ContactUs from './pages/Contact';
 import Portafolio from './pages/Portafolio';
 import Resume from './pages/Resume';
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 import GridCards from "./components/GridCards";
+
 
 
 
@@ -40,18 +42,10 @@ switch (window.location.pathname) {
     <div className="App">
       <NavBar />
       {Component}
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click here to know more about my Projects
-        </a>
-      </header>
-
-      
+      <br></br>
+      <footer className='App-footer'>
+      <Footer />
+      </footer>
     </div>
   );
 }

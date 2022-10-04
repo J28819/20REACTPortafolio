@@ -2,11 +2,18 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import logo from '../img/iot.png';
 import logo2 from '../img/iot2.png';
+import avatar from '../img/avatar.png';
+import Figure from 'react-bootstrap/Figure';
 
 
 function ImgOverlayExample() {
   return (
+
+    
     <Card className="bg-dark text-white">
+
+
+
       <Card.Img variant="top" src={logo} alt="Card image" />
       <Card.ImgOverlay>
         <Card.Title>About Me</Card.Title>
@@ -24,8 +31,24 @@ function ImageAndTextExample() {
     return (
       <>
         <Card>
+
         <Card.Title>About Me</Card.Title>
-          <Card.Img variant="top" src={logo2} />
+
+        <Figure>
+      <Figure.Image
+        width={171}
+        height={180}
+        alt="171x180"
+        src={avatar}
+      />
+      <Figure.Caption>
+        J28819
+      </Figure.Caption>
+    </Figure>
+            
+        
+          
+         
           <Card.Body>
             <Card.Text>
             Hello, My name is Ismael Leal and I like to coding and do electronics, I have a Bachelors degree in Electronics and Automation and Recently complete the Software Engineering program.
@@ -33,6 +56,7 @@ function ImageAndTextExample() {
         
             </Card.Text>
           </Card.Body>
+          <Card.Img variant="top" src={logo2} />
         </Card>
       
        
