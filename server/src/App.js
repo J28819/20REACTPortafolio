@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { Component } from 'react'
 import NavBar from './components/BSNvar';
@@ -8,6 +8,7 @@ import ContactUs from './pages/Contact';
 import Portafolio from './pages/Portafolio';
 import Resume from './pages/Resume';
 import Form from "./components/Form";
+import GridCards from "./components/GridCards";
 
 
 
