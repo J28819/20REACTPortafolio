@@ -24,6 +24,7 @@ function ImageAndTextExample() {
     return (
       <>
         <Card>
+        <Card.Title>About Me</Card.Title>
           <Card.Img variant="top" src={logo2} />
           <Card.Body>
             <Card.Text>
