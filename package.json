@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cd server && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/J28819/20REACTPortafolio/issues"
   },
-  "homepage": "https://github.com/J28819/20REACTPortafolio#readme"
+  "homepage": "https://github.com/J28819/20REACTPortafolio",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
