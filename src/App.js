@@ -21,22 +21,22 @@ import ImgOverlayExample from './components/imgoverley';
 function App() {
 let Component
 switch (window.location.pathname) {
-  case "/home":
+  case "/20REACTPortfolio/home":
     Component = <AboutMe />
     break
-  case "/":
+  case "/20REACTPortfolio/":
     Component = <AboutMe />
     break
-  case "/aboutme":
+  case "/20REACTPortfolio/aboutme":
     Component = <AboutMe />
     break
-  case "/portafolio":
+  case "/20REACTPortfolio/portafolio":
     Component = <Portafolio />
     break
-  case "/contact":
+  case "/20REACTPortfolio/contact":
     Component = <Form />
     break
-  case "/resume":
+  case "/20REACTPortfolio/resume":
     Component = <Resume />
     break
 }
