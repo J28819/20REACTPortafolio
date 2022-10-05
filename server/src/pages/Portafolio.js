@@ -9,6 +9,7 @@ import passgen from '../img/Passgen.png';
 import quizmultopt from '../img/quizmultopt.png';
 import weather from '../img/weather.png';
 import work from '../img/WorkDayScheduler.png';
+import socialnetmongo from '../img/SocialNetMongo.png';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 function Portafolio() {
@@ -94,16 +95,16 @@ Future Implementation add more days and storage them in Local.
     <br></br>
     <CardGroup >
       <Card style={{ padding: '1rem', width: '68rem' }}>
-        <Card.Img variant="top" src={logo} />
+        <Card.Img variant="top" src={socialnetmongo} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>18SocialNetAPI</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+          Social Network API for MongoDB and test it with Insomnia. 
+add users and thoughts using REST communication and MongoDB Models 
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <a href="https://github.com/J28819/04QuizMulOpt">
+          <a href="https://github.com/J28819/18SocialNetAPI">
           <small className="text-muted">click here for more info...</small>
           </a> 
         </Card.Footer>

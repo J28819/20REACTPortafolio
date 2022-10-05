@@ -12,7 +12,7 @@ function CollapsibleExample() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/aboutme">About me </Nav.Link>
-            <Nav.Link href="/portafolio">Portafolio</Nav.Link>
+            <Nav.Link href="/portafolio">Portofolio</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/contact">Contact</Nav.Link>

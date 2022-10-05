@@ -6,42 +6,59 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+var variablevalid = ''
 
+const message = ""
+const handleClick = event => {
+  event.preventDefault();
+
+
+};
+
+const handleChange = event => {
+ 
+  if(event.target.value.trim().length !== 0){
+    variablevalid = event.target.value.trim().length
+    console.log(variablevalid)
+    return
+  }
+};
 
 
 
 function BasicExample() {
+
+  
+
   return (
 
     <Form>
+
 
 <Container>
       {/* Stack the columns on mobile by making one full-width and the other half-width */}
       <Row >
         <Col   xs={12} md={8}>
 
-        <Form.Group className="mb-3 " controlId="formBasicName">
+        <Form.Group s="mb-3 " controlId="formBasicName">
         <Form.Label className="form" >Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter Name" />
+        <Form.Control onChange={handleChange}  type="text" placeholder="Enter Name" />
+        <Form.Text>
+        
+        </Form.Text>
         </Form.Group>
           
-        <Form.Group className="mb-3 " controlId="formBasicEmail">
+        <Form.Group  className="mb-3 " controlId="formBasicEmail">
         <Form.Label className="form" >Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Control   type="email" placeholder="Enter email" />
        
-        <Form.Text >
-          We'll never share your email with anyone else.
-        </Form.Text>
       </Form.Group>
-    
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+      
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label className="form" >Example textarea</Form.Label>
-        <Form.Control as="textarea" rows={3} />
+        <Form.Label className="form" >Message</Form.Label>
+        <Form.Control  as="textarea" rows={3} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button onClick={handleClick} variant="primary" type="submit">
         Submit
       </Button>
         </Col>
