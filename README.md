@@ -16,6 +16,9 @@ SO THAT I can assess whether they're a good candidate for an open position
 
 GitHub Repo: https://github.com/J28819/20REACTPortfolio
 
+Heroku Deploiment: https://reactportafolioj28819.herokuapp.com/20REACTPortfolio/
+
+
 
 ## Local Installation
 
