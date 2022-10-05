@@ -7,7 +7,7 @@ import AboutMe from './pages/AboutMe';
 import ContactUs from './pages/Contact';
 import Portafolio from './pages/Portafolio';
 import Resume from './pages/Resume';
-import Form from "./components/Form";
+import Form from "./components/Form/index";
 import Footer from "./components/Footer";
 import GridCards from "./components/GridCards";
 

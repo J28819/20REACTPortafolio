@@ -1,75 +1,103 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
 import './style.css';
-var variablevalid = ''
+import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const message = ""
-const handleClick = event => {
-  event.preventDefault();
+// Here we import a helper function that will check if the email is valid
+import { checkPassword, validateEmail } from '../../utils/helpers';
 
+function Form() {
+  // Create state variables for the fields in the form
+  // We are also setting their initial values to an empty string
+  const [email, setEmail] = useState('');
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-};
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
-const handleChange = event => {
- 
-  if(event.target.value.trim().length !== 0){
-    variablevalid = event.target.value.trim().length
-    console.log(variablevalid)
-    return
-  }
-};
+    // Based on the input type, we set the state of either email, username, and password
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'userName') {
+      setUserName(inputValue);
+    } else {
+      setPassword(inputValue);
+    }
+  };
 
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
 
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email) || !userName) {
+      setErrorMessage('Email or username is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+    if (!checkPassword(password)) {
+      setErrorMessage(
+        `Please send me your comments before submit: ${userName}`
+      );
+      return;
+    }
+    alert(`Thank you for your comments ${userName}`);
 
-function BasicExample() {
-
-  
+    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    setUserName('');
+    setPassword('');
+    setEmail('');
+  };
 
   return (
 
-    <Form>
-
-
-<Container>
-      {/* Stack the columns on mobile by making one full-width and the other half-width */}
-      <Row >
-        <Col   xs={12} md={8}>
-
-        <Form.Group s="mb-3 " controlId="formBasicName">
-        <Form.Label className="form" >Name</Form.Label>
-        <Form.Control onChange={handleChange}  type="text" placeholder="Enter Name" />
-        <Form.Text>
-        
-        </Form.Text>
-        </Form.Group>
-          
-        <Form.Group  className="mb-3 " controlId="formBasicEmail">
-        <Form.Label className="form" >Email address</Form.Label>
-        <Form.Control   type="email" placeholder="Enter email" />
-       
-      </Form.Group>
-      
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <Form.Label className="form" >Message</Form.Label>
-        <Form.Control  as="textarea" rows={3} />
-      </Form.Group>
-      <Button onClick={handleClick} variant="primary" type="submit">
-        Submit
-      </Button>
-        </Col>
-      </Row>
-    </Container>
+    <Container>
     <div>
+      <p>Contact {userName}</p>
+      <form className="form">
+      <input
+          value={userName}
+          name="userName"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="username"
+          class="form-control"
+        />
+        <input
+          value={email}
+          name="email"
+          onChange={handleInputChange}
+          type="email"
+          placeholder="email"
+          class="form-control"
+        />
+      
+        <textarea
+          value={password}
+          name="password"
+          onChange={handleInputChange}
+          type="textarea"
+          placeholder="Comments"
+          rows="4"
+          class="form-control"
+        />
     <br></br>
+        <button type="button" onClick={handleFormSubmit}>Submit</button>
+      </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </div>
-
-    </Form>
+    </Container>
   );
 }
 
-export default BasicExample;
+export default Form;

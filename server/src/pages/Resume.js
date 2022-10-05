@@ -24,6 +24,7 @@ function ImageAndTextExample() {
         J28819
       </Figure.Caption>
     </Figure>
+    <a href='https://www.linkedin.com/in/ismael-leal-45062429'>click here to access my resume</a>
             
         
           
