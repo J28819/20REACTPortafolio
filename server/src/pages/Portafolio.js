@@ -10,6 +10,7 @@ import quizmultopt from '../img/quizmultopt.png';
 import weather from '../img/weather.png';
 import work from '../img/WorkDayScheduler.png';
 import socialnetmongo from '../img/SocialNetMongo.png';
+import reactportfolio from '../img/20ReactPortfolio.png';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 function Portafolio() {
@@ -111,16 +112,16 @@ add users and thoughts using REST communication and MongoDB Models
       </Card>
 
       <Card style={{ padding: '1rem', width: '68rem' }}>
-        <Card.Img variant="top" src={logo2} />
+        <Card.Img variant="top" src={reactportfolio} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>20REACTPortfolio</Card.Title>
           <Card.Text>
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a little bit longer.
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <a href="https://github.com/J28819/04QuizMulOpt">
+          <a href="https://github.com/J28819/20REACTPortfolio">
           <small className="text-muted">click here for more info...</small>
           </a> 
         </Card.Footer>
