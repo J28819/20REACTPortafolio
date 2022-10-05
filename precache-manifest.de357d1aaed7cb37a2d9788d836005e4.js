@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bfb815986208d53cea90",
+    "revision": "ec589b0e6fdb558f257e",
     "url": "/J28819.github.io/20REACTPortafolio/static/css/main.945b3bba.chunk.css"
   },
   {
-    "revision": "bfb815986208d53cea90",
-    "url": "/J28819.github.io/20REACTPortafolio/static/js/main.bfb81598.chunk.js"
+    "revision": "ec589b0e6fdb558f257e",
+    "url": "/J28819.github.io/20REACTPortafolio/static/js/main.ec589b0e.chunk.js"
   },
   {
     "revision": "8f1f9bdd8571ce5e7bb7",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/J28819.github.io/20REACTPortafolio/static/media/stack.5233a552.png"
   },
   {
-    "revision": "6d56e758071a1f1f862ad96eb7c74fd2",
+    "revision": "50280e40b1abf125bf8fd92a5cbe07d2",
     "url": "/J28819.github.io/20REACTPortafolio/index.html"
   }
 ];
